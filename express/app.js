@@ -24,8 +24,14 @@ app.get("/about", (req, res, next) => {
 // public klasorunu dısa aktardık.
 app.use(express.static(path.join(__dirname,'public')))
 
-app.use("/", (req, res, next) => {
-  res.render(path.join(__dirname,'pages','index'))
+app.get("/", (req, res, next) => {
+  const products = [
+    {name:"Iphone 13 Pro Max",price:"30000",description:"Granit",image:"/iphone13.jpeg"},
+    {name:"Iphone 13 Pro Max",price:"30000",description:"Granit",image:"/iphone13.jpeg"},
+    {name:"Iphone 13 Pro Max",price:"30000",description:"Granit",image:"/iphone13.jpeg"},
+    {name:"Iphone 13 Pro Max",price:"30000",description:"Granit",image:"/iphone13.jpeg"},
+  ]
+  res.render(path.join(__dirname,'pages','index'),{title:'Home Page',products:products})
 });
 
 

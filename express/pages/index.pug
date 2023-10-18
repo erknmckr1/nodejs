@@ -21,44 +21,14 @@ block content
                 span(class="carousel-control-next-icon" aria-hidden="true")
                 span(class="visually-hidden") Next
         div(class="w-full h-full p-3 flex flex-wrap gap-x-5 items-center ")
-            // card
-            div(class="w-[300px] border border-1 mb-2 rounded-sm")
-                div(class="w-full h-auto")
-                    img(src="/iphone13.jpeg" class="d-block w-100" alt="...")
-                div(class="w-full p-2 flex flex-col")
-                    span(class="p-1 text-md font-semibold") Product Name
-                    span(class="p-1") Product title
-                div(class="flex w-full justify-between p-2")
-                    span 100 TL
-                    button(class="bg-[#85929E] text-white p-1 rounded-sm") Details
-            // card
-            div(class="w-[300px] border border-1 mb-2 rounded-sm")
-                div(class="w-full h-auto")
-                    img(src="/iphone13.jpeg" class="d-block w-100" alt="...")
-                div(class="w-full p-2 flex flex-col")
-                    span(class="p-1 text-md font-semibold") Product Name
-                    span(class="p-1") Product title
-                div(class="flex w-full justify-between p-2")
-                    span 100 TL
-                    button(class="bg-[#85929E] text-white p-1 rounded-sm") Details
-            // card
-            div(class="w-[300px] border border-1 mb-2 rounded-sm")
-                div(class="w-full h-auto")
-                    img(src="http://placehold.it/700x400" class="d-block w-100" alt="...")
-                div(class="w-full p-2 flex flex-col")
-                    span(class="p-1 text-md font-semibold") Product Name
-                    span(class="p-1") Product title
-                div(class="flex w-full justify-between p-2")
-                    span 100 TL
-                    button(class="bg-[#85929E] text-white p-1 rounded-sm") Details
-            // card
-            div(class="w-[300px] border border-1 mb-2 rounded-sm")
-                div(class="w-full h-auto")
-                    img(src="http://placehold.it/700x400" class="d-block w-100" alt="...")
-                div(class="w-full p-2 flex flex-col")
-                    span(class="p-1 text-md font-semibold") Product Name
-                    span(class="p-1") Product title
-                div(class="flex w-full justify-between p-2")
-                    span 100 TL
-                    button(class="bg-[#85929E] text-white p-1 rounded-sm") Details
-                    
+            each product in products
+                div(class="w-[300px] border border-1 mb-2 rounded-sm")
+                    div(class="w-full h-auto")
+                        img(src=`${product.image}` class="d-block w-100" alt="...")
+                    div(class="w-full p-2 flex flex-col")
+                        span(class="p-1 text-md font-semibold") #{product.name}
+                        span(class="p-1") #{product.description}
+                    div(class="flex w-full justify-between p-2")
+                        span #{product.price} TL
+                        button(class="bg-[#85929E] text-white p-1 rounded-sm") Details
+                        

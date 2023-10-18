@@ -6,8 +6,7 @@ const router = express.Router();
 
 // add-product sayfasına get ıstegı oldugu zaman add-product.html sayfasını yolluyoruz.
 router.get('/add-product',(req,res,next)=>{
-    const __dirname = path.resolve();
-    res.render(path.join(__dirname,'../','express','pages','add-product.pug'))
+    res.render('add-product',{title:'Add Product Page'})
 })
 
 router.post('/add-product',(req,res,next)=>{
