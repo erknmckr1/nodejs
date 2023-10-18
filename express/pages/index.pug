@@ -1,0 +1,64 @@
+extends layout/layout.pug
+
+block content
+    div(class="w-full h-full")
+        div(id="carouselExampleIndicators" class="carousel slide w-full h-full")
+            div(class="carousel-indicators")
+                button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1")
+                button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2")
+                button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3")
+            div(class="carousel-inner")
+                div(class="carousel-item active")
+                    img(src="/slider3.jpeg" class="d-block w-100" alt="...")
+                div(class="carousel-item")
+                    img(src="/slider3.webp" class="d-block w-100" alt="...")
+                div(class="carousel-item")
+                    img(src="/slider2.jpeg" class="d-block w-100" alt="...")
+            button(class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev")
+                span(class="carousel-control-prev-icon" aria-hidden="true")
+                span(class="visually-hidden") Previous
+            button(class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next")
+                span(class="carousel-control-next-icon" aria-hidden="true")
+                span(class="visually-hidden") Next
+        div(class="w-full h-full p-3 flex flex-wrap gap-x-5 items-center ")
+            // card
+            div(class="w-[300px] border border-1 mb-2 rounded-sm")
+                div(class="w-full h-auto")
+                    img(src="/iphone13.jpeg" class="d-block w-100" alt="...")
+                div(class="w-full p-2 flex flex-col")
+                    span(class="p-1 text-md font-semibold") Product Name
+                    span(class="p-1") Product title
+                div(class="flex w-full justify-between p-2")
+                    span 100 TL
+                    button(class="bg-[#85929E] text-white p-1 rounded-sm") Details
+            // card
+            div(class="w-[300px] border border-1 mb-2 rounded-sm")
+                div(class="w-full h-auto")
+                    img(src="/iphone13.jpeg" class="d-block w-100" alt="...")
+                div(class="w-full p-2 flex flex-col")
+                    span(class="p-1 text-md font-semibold") Product Name
+                    span(class="p-1") Product title
+                div(class="flex w-full justify-between p-2")
+                    span 100 TL
+                    button(class="bg-[#85929E] text-white p-1 rounded-sm") Details
+            // card
+            div(class="w-[300px] border border-1 mb-2 rounded-sm")
+                div(class="w-full h-auto")
+                    img(src="http://placehold.it/700x400" class="d-block w-100" alt="...")
+                div(class="w-full p-2 flex flex-col")
+                    span(class="p-1 text-md font-semibold") Product Name
+                    span(class="p-1") Product title
+                div(class="flex w-full justify-between p-2")
+                    span 100 TL
+                    button(class="bg-[#85929E] text-white p-1 rounded-sm") Details
+            // card
+            div(class="w-[300px] border border-1 mb-2 rounded-sm")
+                div(class="w-full h-auto")
+                    img(src="http://placehold.it/700x400" class="d-block w-100" alt="...")
+                div(class="w-full p-2 flex flex-col")
+                    span(class="p-1 text-md font-semibold") Product Name
+                    span(class="p-1") Product title
+                div(class="flex w-full justify-between p-2")
+                    span 100 TL
+                    button(class="bg-[#85929E] text-white p-1 rounded-sm") Details
+                    

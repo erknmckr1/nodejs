@@ -8,6 +8,10 @@ const port = 4000;
 
 const __dirname = path.resolve();
 
+// hangı engıne paketı kullanacagımızı sectik.
+app.set('view engine','pug')
+app.set('views','./pages')
+
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/admin', adminRoutes);
@@ -17,10 +21,11 @@ app.get("/about", (req, res, next) => {
   res.send("Welcome to the about page");
 });
 
+// public klasorunu dısa aktardık.
 app.use(express.static(path.join(__dirname,'public')))
 
 app.use("/", (req, res, next) => {
-  res.sendFile(path.join(__dirname,'pages','index.html'))
+  res.render(path.join(__dirname,'pages','index'))
 });
 
 

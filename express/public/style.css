@@ -1,0 +1,7 @@
+.custom-height {
+    height: calc(100% - 100px);
+  }
+
+  .x{
+    background-color: aqua;
+  }
