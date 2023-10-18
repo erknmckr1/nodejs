@@ -1,5 +1,7 @@
 extends layout/layout.pug
 
+include includes/createProduct.pug
+
 block content
     div(class="w-full h-full")
         div(id="carouselExampleIndicators" class="carousel slide w-full h-full")
@@ -22,13 +24,5 @@ block content
                 span(class="visually-hidden") Next
         div(class="w-full h-full p-3 flex flex-wrap gap-x-5 items-center ")
             each product in products
-                div(class="w-[300px] border border-1 mb-2 rounded-sm")
-                    div(class="w-full h-auto")
-                        img(src=`${product.image}` class="d-block w-100" alt="...")
-                    div(class="w-full p-2 flex flex-col")
-                        span(class="p-1 text-md font-semibold") #{product.name}
-                        span(class="p-1") #{product.description}
-                    div(class="flex w-full justify-between p-2")
-                        span #{product.price} TL
-                        button(class="bg-[#85929E] text-white p-1 rounded-sm") Details
+                +createProduct(product)
                         

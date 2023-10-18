@@ -1,7 +1,17 @@
 extends layout/layout.pug
 
 block content
-    div(class='w-2/3 h-full    ')
-        div(class='w-full h-full flex justify-center gap-x-3')
-            input(class='border border-1 p-3 ' type='text')
-            button(class='p-3 bg-blue-300 block') Add
+    div(class='w-2/3 h-full flex flex-col gap-y-3')
+        form(action='/admin/add-product', method='POST')
+            div(class='w-full h-full flex justify-center gap-x-3')
+                input(class='border border-1 p-3 ' type='text' name="productName" placeholder='name')
+           
+            div(class='w-full h-full flex justify-center gap-x-3')
+                input(class='border border-1 p-3 ' type='text' name="productDescription"  placeholder='description')
+           
+            div(class='w-full h-full flex justify-center gap-x-3')
+                input(class='border border-1 p-3 ' type='text' name="productPrice"  placeholder='price')
+            
+            div(class='w-full h-full flex justify-center gap-x-3')
+                input(class='border border-1 p-3 ' type='text' name="productImage"  placeholder='img')
+            button(class='p-3 bg-blue-300 block' type="Submit") Add   
