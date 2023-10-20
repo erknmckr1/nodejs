@@ -1,11 +1,17 @@
-nav(class="w-full h-[100px] bg-[#F4F6F6] flex")
+nav(class="w-full h-[100px] bg-[#AED6F1] flex")
     div(class="text-3xl w-1/3 h-full flex justify-center items-center")
         | BRAND
     div(class="w-2/3")
         ul(class="w-full h-full flex gap-x-5 items-center justify-center")
             li
-                a(href="", class=(path === '/' ? "text-black underline font-semibold" : "")) HOME
+                a(href="/", class=(path === '/' ? "text-black underline font-semibold" : "")) HOME
+            li
+                a(href="/products", class=(path === '/products' ? "text-black underline font-semibold" : "")) PRODUCT
+            li
+                a(href="/card", class=(path === '/card' ? "text-black underline font-semibold" : "")) CARD
+            li
+                a(href="/orders", class=(path === '/orders' ? "text-black underline font-semibold" : "")) ORDERS
             li  
-                a(href="/admin/add-product", class=(path === '/admin/add-product' ? "text-black underline font-semibold" : "")) ADD PRODUCT
-            li 
-                a(href="") CONTACT
+                a(href="/admin/products", class=(path === '/admin/products' ? "text-black underline font-semibold" : "")) ADMİN PRODUCTS
+            li  
+                a(href="/admin/add-product", class=(path === '/admin/add-product' ? "text-black underline font-semibold" : "")) ADD PRODUCTS

@@ -1,4 +1,9 @@
-const products = [];
+const products = [
+    {name:"Iphone 13 Pro Max",price:"30000",description:"Granit",image:"/iphone13.jpeg"},
+    {name:"Iphone 13 Pro Max",price:"30000",description:"Granit",image:"/iphone13.jpeg"},
+    {name:"Iphone 13 Pro Max",price:"30000",description:"Granit",image:"/iphone13.jpeg"},
+    {name:"Iphone 13 Pro Max",price:"30000",description:"Granit",image:"/iphone13.jpeg"},
+  ]
 
  class Product {
     constructor(name,price,image,description){

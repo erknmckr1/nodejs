@@ -3,8 +3,10 @@ mixin createProduct(product)
         div(class="w-full h-auto")
             img(src=`${product.image}` class="d-block w-100" alt="...")
         div(class="w-full p-2 flex flex-col")
-            span(class="p-1 text-md font-semibold") #{product.name}
+            span(class="p-1 text-md font-semibold") 
+                a(href="#"  class="hover:underline text-[20px]") #{product.name}
             span(class="p-1") #{product.description}
         div(class="flex w-full justify-between p-2")
             span #{product.price} TL
-            button(class="bg-[#85929E] text-white p-1 rounded-sm") Details
+            a(href="#")
+                button(class="bg-[#85929E] text-white p-1 rounded-sm") Add To Card

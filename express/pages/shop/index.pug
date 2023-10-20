@@ -1,0 +1,11 @@
+extends ../layout/layout.pug
+
+include ../mixins/createProduct.pug
+
+block content
+    div(class="w-full h-full")
+        include ../includes/slider.pug
+        div(class="w-full h-full p-3 flex flex-wrap gap-x-5 items-center ")
+            each product in products
+                +createProduct(product)
+                        
