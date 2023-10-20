@@ -3,6 +3,9 @@ nav(class="w-full h-[100px] bg-[#F4F6F6] flex")
         | BRAND
     div(class="w-2/3")
         ul(class="w-full h-full flex gap-x-5 items-center justify-center")
-            li HOME
-            li PRODUCT
-            li CONTACT
+            li
+                a(href="", class=(path === '/' ? "text-black underline font-semibold" : "")) HOME
+            li  
+                a(href="/admin/add-product", class=(path === '/admin/add-product' ? "text-black underline font-semibold" : "")) ADD PRODUCT
+            li 
+                a(href="") CONTACT
