@@ -3,7 +3,6 @@ import bodyParser from "body-parser";
 import adminRoutes from "./routes/admin.js"; 
 import shopRoutes from "./routes/shop.js"
 import path from "path";
-import {getProducts } from "./controllers/admin.js";
 import { notFount } from "./controllers/errors.js";
 const app = express();
 const port = 4000;
@@ -19,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // "/admin" uzantısına gelen ıstekler adminRoutes alındaki rotalar ile karşılanır.
 app.use("/admin", adminRoutes);
+// "/" ile baslayan ıstekler shopRoutes alanındakı rotalar ıle karsılasacak.
 app.use("/",shopRoutes)
 
 // public klasorunu dısa aktardık.

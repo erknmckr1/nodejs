@@ -1,17 +1,23 @@
 extends ../layout/layout.pug
 
 block content
-    div(class='w-2/3 h-full flex flex-col gap-y-3')
-        form(action='/admin/add-product', method='POST')
-            div(class='w-full h-full flex justify-center gap-x-3')
-                input(class='border border-1 p-3 ' type='text' name="productName" placeholder='name')
-           
-            div(class='w-full h-full flex justify-center gap-x-3')
-                input(class='border border-1 p-3 ' type='text' name="productDescription"  placeholder='description')
-           
-            div(class='w-full h-full flex justify-center gap-x-3')
-                input(class='border border-1 p-3 ' type='text' name="productPrice"  placeholder='price')
-            
-            div(class='w-full h-full flex justify-center gap-x-3')
-                input(class='border border-1 p-3 ' type='text' name="productImage"  placeholder='img')
-            button(class='p-3 bg-blue-300 block' type="Submit") Add   
+    div(class='w-2/3 h-full flex  gap-y-3')
+        div(class="w-full h-full flex ml-5 ")
+            form(action='/admin/add-product' method='POST' class="w-[500px] h-full flex flex-col gap-y-3")
+                input(type="hidden" name="id" value=`${product.id}`)
+                div(class='w-full h-full flex justify-between items-center gap-x-3')
+                    span() Name
+                    input(class='border border-1 p-3 ' value=`${product.name}` type='text' name="productName" placeholder='name')
+
+                div(class='w-full h-full flex justify-between gap-x-3 items-center')
+                    span() Description
+                    input(class='border border-1 p-3 ' value=`${product.description}` type='text' name="productDescription" placeholder='description')
+
+                div(class='w-full h-full flex justify-between gap-x-3 items-center')
+                    span() Price
+                    input(class='border border-1 p-3 ' type='text' name="productPrice" placeholder='price')
+
+                div(class='w-full h-full flex justify-between gap-x-3 items-center')
+                    span() İmage
+                    input(class='border border-1 p-3 ' type='text' name="productImage" placeholder='img')
+                button(class='p-3 bg-blue-300 block w-24' type="Submit") Save    

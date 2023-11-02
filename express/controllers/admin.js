@@ -39,12 +39,22 @@ export const postAddProduct = (req, res, next) => {
 };
 
 export const getEditProduct = (req, res, next) => {
+  const productId = req.params.productid;
+  const product = Product.getProduct(productId)
   res.render("admin/edit-product", {
     title: "Admin Edit Product",
     path: "/admin/edit-product",
+    product:product
   });
 };
 
 export const postEditProduct = (req, res, next) => {
-  res.redirect("/");
+  const product = Product.getProduct(req.body.id)
+  product.name=req.body.productName
+  product.price=req.body.productPrice
+  product.image=req.body.productImage
+  product.description=req.body.productDescription
+
+  Product.update(product)
+  res.redirect("/admin/products");
 };

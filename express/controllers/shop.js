@@ -10,6 +10,12 @@ export const getProducts = (req, res, next) => {
   res.render("shop/products", { title: "Products", products: products, path: "/products" });
 };
 
+export const getProduct = (req, res, next) => {
+  const productId = req.params.productid;
+  const product = Product.getProduct(productId)
+  res.render("shop/product-detail", { title: `Product/${productId}`, path: "/products",  productId: productId , product: product });
+}
+
 export const getProductsDetail = (req, res, next) => {
   res.render("shop/detail", { title: "Details", path: "/detail" });
 };
